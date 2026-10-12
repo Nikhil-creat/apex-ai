@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+python-multipart
+onnxruntime
+numpy
+pillow
+torch --extra-index-url https://download.pytorch.org/whl/cpu

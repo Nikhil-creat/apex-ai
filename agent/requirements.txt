@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+groq
+langgraph
+instructor
+pydantic
+httpx
+python-multipart
+qdrant-client
+fastembed
+flashrank
+neo4j
+mcp
+opentelemetry-sdk
+opentelemetry-exporter-otlp

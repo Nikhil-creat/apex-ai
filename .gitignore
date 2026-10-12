@@ -1,0 +1,6 @@
+.env
+node_modules/
+.next/
+__pycache__/
+*.onnx
+*.pt
