@@ -13,3 +13,4 @@ neo4j
 mcp
 opentelemetry-sdk
 opentelemetry-exporter-otlp
+edge-tts

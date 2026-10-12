@@ -28,6 +28,7 @@ async def chat(req: ChatIn):
         if state["blocked"]:
             yield sse("token", "Request blocked by the safety filter."); return
         if state["intent"] == "rag": yield sse("tool", "hybrid-rag")
+        if state["intent"] == "tool": yield sse("tool", "mcp")
         remember_turn(req.session, "user", req.query)
         for word in state["answer"].split(" "):
             yield sse("token", word + " "); await asyncio.sleep(0.01)
@@ -38,3 +39,6 @@ async def chat(req: ChatIn):
 async def ingest(file: UploadFile):
     from scripts.ingest import ingest_text
     return {"chunks": ingest_text((await file.read()).decode("utf-8", "ignore"), file.filename)}
+
+from .voice import router as voice_router
+app.include_router(voice_router, prefix="/voice")

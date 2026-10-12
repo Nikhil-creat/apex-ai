@@ -19,7 +19,9 @@ docker compose up --build
 Put images in `vision/data/<label>/` and run `python -m app.train` inside `apex-vision`. The image ships with untrained placeholder weights.
 
 ## Status
-Dockerfiles, the `/chat` SSE route, MCP client, memory, telemetry and ingestion are included but untested end to end. Still to do: train the CNN, run Ollama (`ollama pull qwen2.5:0.5b`) for local triage, add voice routes (Groq Whisper and TTS), and wire MCP tools into the graph.
+Included but untested end to end: Dockerfiles, `/chat` SSE route, voice routes (`/voice/stt`, `/voice/tts`), MCP tools (send `/tool sqlite list_tables` in chat), memory, telemetry, ingestion, CI. Still to do: train the CNN, run Ollama (`ollama pull qwen2.5:0.5b`), and stream tokens straight from Groq.
 
 ---
 Designed and developed by **NIKHIL CHARY SRIRAMOJU** · [GitHub](https://github.com/Nikhil-creat) · [LinkedIn](https://in.linkedin.com/in/nikhil-chary-sriramoju-95041b38a)
+
+**Keywords:** agentic-ai, langgraph, groq, mcp, graphrag, rag, qdrant, neo4j, pytorch, onnx, fastapi, nextjs, docker, multimodal, prompt-injection
